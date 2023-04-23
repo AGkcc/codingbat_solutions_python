@@ -1,0 +1,10 @@
+def last2(str):
+  if len(str) < 2:
+    return 0
+  else:
+    to_be_compared = str[-2:]
+    counter = 0
+    for i in range(0, len(str) - 2):
+      if str[i: i + 2] == to_be_compared:
+        counter += 1
+  return counter

@@ -1,0 +1,18 @@
+def string_match(a, b):
+  length = 0
+  selected = None
+  if len(a) <= len(b):
+    length = len(a)
+    selected = a
+    compared = b
+  else:
+    length = len(b)
+    selected = b
+    compared = a
+  
+  match_count = 0
+  for i in range(length - 1):
+    if selected[i: i+2] == compared[i: i+2]:
+      match_count += 1
+  return match_count
+# not the most elegant solution but it minimizes the number of iterations
